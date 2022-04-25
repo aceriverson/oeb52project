@@ -19,8 +19,10 @@
     } else if (chapterState == 1) {
         displayText = ""
     } else if (chapterState == 2) {
-        displayText = "Up above the floor, there are greater winds. Could they be useful?";
+        displayText = "This is so advantageous, reinforced vascular systems likely evolved multiple times.";
     } else if (chapterState == 3) {
+        displayText = "Up above the floor, there are greater winds. Could they be useful?";
+    } else if (chapterState == 4) {
         isNextVisible = false;
     }
     
@@ -34,7 +36,7 @@
     <img transition:fly="{{ x: -200, duration: 1500 }}" class="wind2 animate__animated animate__slower animate__shakeX animate__infinite" src={wind} />
     {/if}
 
-    {#if chapterState >= 3}
+    {#if chapterState >= 4}
     <img transition:fly="{{ x: -2000, duration: 2000 }}" class="pollen1 animate__animated animate__slow animate__rubberBand animate__infinite" src={pollen} on:click={() => state.set("forest")} />
     {/if}
   

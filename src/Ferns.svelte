@@ -20,23 +20,25 @@
         displayText = "The evolution of true roots allows these plants to find more nutrients.";
         isNextVisible = false;
     } else if (chapterState == 5) {
-        displayText = "Additionally, these plants evolved complex vascular systems to transport water and nutrients.";
+        displayText = "Roots likely evolved at least two separate times among land plants.";
         isNextVisible = true;
     } else if (chapterState == 6) {
-        displayText = "Vascular tissue allows these plants to grow even taller too!";
+        displayText = "Additionally, these plants evolved complex vascular systems to transport water and nutrients.";
     } else if (chapterState == 7) {
-        displayText = "Ferns still utilize swimming sperm that need to stay close to the ground to find water to move, keeping the gametophyte small."
+        displayText = "Vascular tissue allows these plants to grow even taller too!";
     } else if (chapterState == 8) {
+        displayText = "Ferns still utilize swimming sperm that need to stay close to the ground to find water to move, keeping the gametophyte small."
+    } else if (chapterState == 9) {
         displayText = "";
         isNextVisible = false;
-    } else if (chapterState == 10) {
+    } else if (chapterState == 11) {
         displayText = "Oh no, the ability to grow taller means some plants are blocking out your light!";
         isNextVisible = true;
-    } else if (chapterState == 11) {
-        displayText = "There is selective pressure to increase the size of the sporophyte generation to compete.";
     } else if (chapterState == 12) {
-        displayText = "This sounds like another adaptation would be advantageous.";
+        displayText = "There is selective pressure to increase the size of the sporophyte generation to compete.";
     } else if (chapterState == 13) {
+        displayText = "This sounds like another adaptation would be advantageous.";
+    } else if (chapterState == 14) {
         state.set("aboveferns");
     }
     
@@ -55,9 +57,9 @@
     <h2 transition:fly="{{ y: 200, duration: 2000 }}" class="nut3 animate__animated animate__slower animate__flip animate__infinite" on:click={(e) => {e.target.remove(); chapterState++}}>P</h2>
     {/if}
 
-    {#if chapterState >= 8}
-    <img transition:fly="{{ y: 200, duration: 2000 }}" class="sun1 animate__animated" src={sun} on:click={(e) => {e.target.classList.toggle("animate__headShake"); chapterState < 10 ? chapterState++ : null}} />
-    <img transition:fly="{{ y: 200, duration: 2000 }}" class="sun2 animate__animated" src={sun} on:click={(e) => {e.target.classList.toggle("animate__headShake"); chapterState < 10 ? chapterState++ : null}} />
+    {#if chapterState >= 9}
+    <img transition:fly="{{ y: 200, duration: 2000 }}" class="sun1 animate__animated" src={sun} on:click={(e) => {e.target.classList.toggle("animate__headShake"); chapterState < 11 ? chapterState++ : null}} />
+    <img transition:fly="{{ y: 200, duration: 2000 }}" class="sun2 animate__animated" src={sun} on:click={(e) => {e.target.classList.toggle("animate__headShake"); chapterState < 11 ? chapterState++ : null}} />
     {/if}
   
     <div class="card">
