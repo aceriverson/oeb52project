@@ -3,12 +3,12 @@
 
   import Ocean from './Ocean.svelte';
   import Puddle from './Puddle.svelte';
-  import DrySoil from './DrySoil.svelte'
-  import Ferns from './Ferns.svelte'
-  import AboveFerns from './AboveFerns.svelte'
-  import Forest from './Forest.svelte'
-
-  // let clicks = 0;
+  import DrySoil from './DrySoil.svelte';
+  import Ferns from './Ferns.svelte';
+  import AboveFerns from './AboveFerns.svelte';
+  import Forest from './Forest.svelte';
+  import FlowerForest from './FlowerForest.svelte';
+  import Fin from './Fin.svelte';
 </script>
 
 <main>
@@ -20,6 +20,8 @@
       <option value="ferns">Ferns</option>
       <option value="aboveferns">Above the Ferns</option>
       <option value="forest">Forest</option>
+      <option value="flowerforest">Flowering Forest</option>
+      <option value="fin">Fin</option>
     </select>
   </form>
   {#if $state === "ocean"}
@@ -39,6 +41,12 @@
   {/if}
   {#if $state === "forest"}
   <Forest />
+  {/if}
+  {#if $state === "flowerforest"}
+  <FlowerForest />
+  {/if}
+  {#if $state == "fin"}
+  <Fin />
   {/if}
 </main>
 

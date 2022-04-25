@@ -77,7 +77,7 @@
     main {
         text-align: center;
         height: 100%;
-        background: url('./assets/dry_soil.png') no-repeat center center fixed; 
+        background: url('./assets/dry_soil.jpg') no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
